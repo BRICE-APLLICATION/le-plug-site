@@ -70,13 +70,15 @@ body {
 }
 
 .spin-jar {
-  animation: spin360 9s linear infinite;
+  animation: spinY180 3.5s ease-in-out infinite;
   animation-delay: var(--spin-delay, 0s);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
-@keyframes spin360 {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes spinY180 {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
 }
 
 /* ---------- Misc ---------- */

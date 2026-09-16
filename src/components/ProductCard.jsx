@@ -10,7 +10,10 @@ export default function ProductCard({ product, onSelect, index }) {
         soldOut ? 'opacity-40 cursor-not-allowed' : 'hover:scale-[1.03] hover:border-white'
       }`}
     >
-      <div className="aspect-square w-full overflow-hidden flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+      <div
+        className="aspect-square w-full overflow-hidden flex items-center justify-center transition-transform duration-500 group-hover:scale-110"
+        style={{ perspective: '600px' }}
+      >
         {product.image_url ? (
           <img
             src={product.image_url}
