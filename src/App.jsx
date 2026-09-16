@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="relative min-h-screen">
       <Starfield />
 
       {ageStatus === 'pending' && (
@@ -28,7 +28,7 @@ function App() {
       )}
 
       {ageStatus === 'verified' && (
-        <div className="min-h-screen flex flex-col">
+        <div className="relative z-10 min-h-screen flex flex-col">
           <header className="border-b border-white/15 py-8 text-center">
             <h1 className="text-3xl sm:text-4xl font-bold tracking-wide-xl">LE PLUG</h1>
             <p className="text-white/50 text-sm mt-2 uppercase tracking-widest">
@@ -71,7 +71,7 @@ function App() {
           onOrderPlaced={refetch}
         />
       )}
-    </>
+    </div>
   )
 }
 

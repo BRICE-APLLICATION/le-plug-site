@@ -26,9 +26,10 @@ body {
 .starfield {
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   background: #000;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .starfield .star {
@@ -63,18 +64,19 @@ body {
   100% { transform: translate(130vw, 55vw) rotate(18deg); opacity: 0; }
 }
 
-/* ---------- Product card float ---------- */
-.float-card {
-  animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
+/* ---------- Product card ---------- */
 .card-shadow {
   box-shadow: 0 20px 45px -15px rgba(255, 255, 255, 0.18);
+}
+
+.spin-jar {
+  animation: spin360 9s linear infinite;
+  animation-delay: var(--spin-delay, 0s);
+}
+
+@keyframes spin360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* ---------- Misc ---------- */
